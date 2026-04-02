@@ -26,6 +26,17 @@ body {
     transform: translateY(0);
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 img{
     max-width: 100%;
 }
