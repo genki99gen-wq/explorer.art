@@ -5,6 +5,14 @@
     nav.classList.toggle('active');
   });
 
+  const links = document.querySelectorAll("#nav a");
+
+  links.forEach(link => {
+    link.addEventListener("click",() => {
+      nav.classList.remove("active");
+    });
+  });
+
   window.addEventListener("load",()=> {
     const elements =document.querySelectorAll(".fade-in");
 
