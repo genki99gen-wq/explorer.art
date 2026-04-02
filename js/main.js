@@ -5,6 +5,14 @@
     nav.classList.toggle('active');
   });
 
+  window.addEventListener("load",()=> {
+    const elements =document.querySelectorAll(".fade-in");
+
+    elements.forEach(el => {
+      el.classList.add("show");
+    });
+  });
+
   const items = document.querySelectorAll(".fade");
 
   window.addEventListener("scroll", () => {
@@ -19,3 +27,4 @@
       }
     })
   })
+
