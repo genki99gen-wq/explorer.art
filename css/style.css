@@ -15,6 +15,41 @@ body {
     font-style: normal;
 }
 
+#pagetop {
+    position: fixed;
+    right: 40px;
+    bottom: 20px;
+    z-index: 5500;
+    display: block;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    background: rgba(0,0,0,.5);
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    opacity: 0;
+    transition: .5s;
+}
+
+#pagetop.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#pagetop span {
+    position: absolute;
+    top: 16px;
+    left: 11px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    content: "";
+    border-top: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+
 .fade {
     opacity: 0;
     transform: translateY(50px);
@@ -217,7 +252,7 @@ header .site-wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 72px;
     text-align: left;
 }
 
@@ -457,10 +492,20 @@ header .site-wrapper {
     padding: 80px 25%;
     }
 
+    #gallery .content .image {
+        height: 160px;
+    }
+
+    #gallery .reverse .image {
+        height: 200px;
+    }
+
     #gallery .content {
         display: flex;
         flex-direction: column;
+        gap: 10px;
     }
+
 
     #gallery .text {
         display: contents;
@@ -472,7 +517,6 @@ header .site-wrapper {
 
     #gallery .content .content-title {
         order: -1;
-        padding-bottom: 10%;
     }
 
     #gallery .content .image .image-works {
