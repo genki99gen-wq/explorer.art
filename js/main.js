@@ -33,7 +33,7 @@
       else {
         el.classList.remove("active");
       }
-    })
+    });
   });
 
   document.addEventListener('DOMContentLoaded' , function () {
